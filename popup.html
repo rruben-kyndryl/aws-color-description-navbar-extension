@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Options</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        td,
+        td {
+            padding: 0.5em;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>AWS Color Management</h1>
+    <table id="aws_accounts">
+        <tr>
+            <th>Account</th>
+            <th>Description</th>
+            <th>Color</th>
+            <th>Action</th>
+        </tr>
+    </table>
+    <hr />
+    <table id="input">
+        <tr>
+            <td>Account</td>
+            <td><input id="input_account" type="text"></td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td><input id="input_description" type="text"></td>
+        </tr>
+        <tr>
+            <td>Color</td>
+            <td><input id="input_color" type="color"></td>
+        </tr>
+    </table>
+    <button class="button" id="add-account">
+        Add Account
+    </button>
+
+    <script src="./popup.js"></script>
+</body>
+
+</html>
