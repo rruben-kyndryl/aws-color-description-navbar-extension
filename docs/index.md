@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://raw.githubusercontent.com/corollari/aws-color-region-navbar-extension/master/icon.png" width="64">
+  <img src="https://rruben-kyndryl.github.io/aws-color-description-navbar-extension/assets/icon.png" width="64">
   <br>
   AWS Navbar Description and Color Extension
   <br>
@@ -8,7 +8,7 @@
 <h4 align="center">A browser extension that changes the color of the AWS navbar and adds a descripption depending on the account you are connected to.</h4>
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/corollari/aws-color-region-navbar-extension/master/screenshot.png">
+<img src="https://rruben-kyndryl.github.io/aws-color-description-navbar-extension/assets/screenshot.png">
 </p>
 
 # Install
