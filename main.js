@@ -75,9 +75,9 @@ function drawDescription() {
                 document.querySelector("div.globalNav-033").style.backgroundColor = datos["color"];
                 document.querySelector("input.globalNav-search-0419").style.setProperty('background-color', 'white', 'important');
                 document.querySelector("input.globalNav-search-0419").style.setProperty('color', 'black', 'important');
-                document.querySelector("input.globalNav-search-0419").style.setProperty('border-color', LightenDarkenColor(datos["color"], -50), 'important');
+                document.querySelector("input.globalNav-search-0419").style.setProperty('border-color', LightenDarkenColor(datos["color"], -40), 'important');
 
-                document.getElementById("console-nav-footer-inner").style.borderColor = LightenDarkenColor(datos["color"], -50);
+                document.getElementById("console-nav-footer-inner").style.borderColor = LightenDarkenColor(datos["color"], -40);
                 document.getElementById("console-nav-footer-inner").style.backgroundColor = datos["color"];
                 document.getElementById("awsc-nav-footer-content").insertBefore(header, document.getElementById("awsc-nav-footer-content").children[3]);
                 //document.querySelector("console-nav-footer-inner").children[0].insertBefore(header, document.querySelector("console-nav-footer-inner").children[0].firstChild);
