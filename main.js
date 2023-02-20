@@ -1,4 +1,5 @@
-const account = document.querySelector("div.globalNav-0336").children[0].innerText.split(":")[1].trim().replaceAll("-", "")
+const account = document.querySelector('[data-testid="account-detail-menu"]').querySelectorAll('span')[1].innerText.trim().replaceAll("-", "")
+
 
 function LightenDarkenColor(col, amt) {
     var usePound = false;
@@ -44,7 +45,7 @@ chrome.runtime.onMessage.addListener(
 function drawDescription() {
     chrome.storage.sync.get(account, (results) => {
 
-        const Account = document.querySelector("div.globalNav-0336").children[0].innerText.split(":")[1].trim()
+        const Account = document.querySelector('[data-testid="account-detail-menu"]').querySelectorAll('span')[1].innerText.trim().replaceAll("-", "")
 
         header = document.getElementById("aws-description-header");
         span = document.getElementById("aws-description-span");
@@ -56,13 +57,6 @@ function drawDescription() {
                 span = document.createElement('span');
 
                 header.id = "aws-description-header";
-                header.className = "globalNav-033";
-                header.style.fontFamily = '"Amazon Ember","Helvetica Neue",Roboto,Arial,sans-serif';
-                header.style.fontSize = "15px";
-                header.style.fontWeight = "600";
-                header.style.color = "white";
-                header.style.display = "inline-flex";
-                header.style.flexGrow = "2";
                 header.style.backgroundColor = datos["color"];
                 header.appendChild(span);
 
@@ -72,15 +66,13 @@ function drawDescription() {
                 span.innerText = "Account: " + datos["description"];
 
                 console.info("color:" + datos["color"]);
-                document.querySelector("div.globalNav-033").style.backgroundColor = datos["color"];
-                document.querySelector("input.globalNav-search-0419").style.setProperty('background-color', 'white', 'important');
-                document.querySelector("input.globalNav-search-0419").style.setProperty('color', 'black', 'important');
-                document.querySelector("input.globalNav-search-0419").style.setProperty('border-color', LightenDarkenColor(datos["color"], -40), 'important');
-
+                document.getElementById("awsc-nav-header").children[0].style.backgroundColor = datos["color"];
+                document.getElementById("awsc-concierge-input").style.setProperty('background-color', 'white', 'important');
+                document.getElementById("awsc-concierge-input").style.setProperty('color', 'black', 'important');
+                document.getElementById("awsc-concierge-input").style.setProperty('border-color', LightenDarkenColor(datos["color"], -40), 'important');
                 document.getElementById("console-nav-footer-inner").style.borderColor = LightenDarkenColor(datos["color"], -40);
                 document.getElementById("console-nav-footer-inner").style.backgroundColor = datos["color"];
                 document.getElementById("awsc-nav-footer-content").insertBefore(header, document.getElementById("awsc-nav-footer-content").children[3]);
-                //document.querySelector("console-nav-footer-inner").children[0].insertBefore(header, document.querySelector("console-nav-footer-inner").children[0].firstChild);
             } else {
                 header.style.backgroundColor = datos["color"];
                 span.innerText = "Account: " + datos["description"];

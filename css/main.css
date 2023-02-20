@@ -18,3 +18,32 @@
 .prod {
     background-color: #ea0606 !important;
 }
+
+.aws-color-title {
+    -webkit-box-ordinal-group: 3;
+    order: 2;
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px
+}
+
+@media only screen and (min-width: 1120px) {
+    .aws-color-title {
+        margin-top: 0px;
+        -webkit-box-flex: 1;
+        flex-grow: 1;
+        flex-basis: 0;
+        padding: 0 5px;
+        font-size: 14px;
+        text-align: right;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: end;
+        justify-content: flex-end;
+        margin-right: 25px
+    }
+}
